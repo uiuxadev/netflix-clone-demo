@@ -32,8 +32,8 @@ const Header = () => {
         <picture>
           <img
             src="https://rb.gy/ulxxee"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             className="cursor-pointer object-contain"
             alt="logo"
           />

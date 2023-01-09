@@ -15,6 +15,12 @@ const nextConfig = {
         port: "",
         pathname: "/t/p/w500/**",
       },
+      // {
+      //   protocol: "https",
+      //   hostname: "rb.gy",
+      //   port: "",
+      //   pathname: "/p2hphi/**",
+      // },
     ],
     // domains: ["image.tmdb.org"],
   },
