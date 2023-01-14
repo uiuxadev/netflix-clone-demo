@@ -2,6 +2,7 @@ import Head from "next/head";
 // import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import useAuth from "../hooks/useAuth";
 
 interface Inputs {
   email: string;
@@ -11,6 +12,9 @@ interface Inputs {
 const login = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [login, setLogin] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { signIn, signUp } = useAuth();
+
   const {
     register,
     handleSubmit,
@@ -22,9 +26,9 @@ const login = () => {
     console.log(data);
     if (login) {
       // destructure data into "email" and "password"
-      //   await signIn(data.email, data.password);
+      await signIn(data.email, data.password);
     } else {
-      //   await signUp(data.email, data.password);
+      await signUp(data.email, data.password);
     }
   };
 
