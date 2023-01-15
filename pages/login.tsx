@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 // import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -38,22 +39,12 @@ const login = () => {
         <title>Netflix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Image
+      <Image
         src="https://rb.gy/p2hphi"
         fill
         className="-z-10 !hidden opacity-60 sm:!inline object-cover"
-        alt="test"
-      /> */}
-      <picture>
-        <img
-          src="https://rb.gy/p2hphi"
-          sizes="(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw"
-          className="-z-10 !hidden opacity-60 sm:!inline object-cover"
-          alt="login image"
-        />
-      </picture>
+        alt="login image"
+      />
 
       <picture>
         <img
@@ -65,9 +56,17 @@ const login = () => {
         />
       </picture>
 
+      {/* <Image
+        src="https://rb.gy/ulxxee"
+        className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
+        width={150}
+        height={150}
+        alt="logo"
+      /> */}
+
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:mt-0 md:max-w-md md:px-14"
+        className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:mt-0 md:max-w-md"
       >
         <h1 className="text-4xl font-semibold">Sign In</h1>
         <div className="space-y-4">
