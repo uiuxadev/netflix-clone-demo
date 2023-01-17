@@ -6,6 +6,7 @@ import { RecoilRoot } from "recoil";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
+      {/* Higher Order Component */}
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
